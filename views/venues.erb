@@ -1,0 +1,36 @@
+<h1>Musicians Guide</h1>
+
+<div class = "row mt-3">
+    <div class = "col">
+        <p><a href ="/venues/new" class="btn btn-outline-primary">New Venue</a></p>
+    </div>
+</div>
+<% for venue in @venues %>
+    <div class = "row">
+        <div class = "col">
+            <div class = "venuename">
+                <h3><a href="/venues/<%= venue[:id]%>"><%=venue[:venue_name]%></a></h3>
+            </div>
+        </div>
+    </div>
+    <div class = "row">
+        <div class = "col-md-4">
+            <p>Overall: <%=venue[:avg_overall]%>/5
+            <% if venue[:avg_overall] >3.5%>
+                <i class="fas fa-smile"></i>
+            <% elsif venue[:avg_overall] >= 2.5 %>
+                <i class="fas fa-meh"></i>
+            <% else %>
+                <i class="fas fa-frown"></i>
+            <% end %>
+            </p>
+        </div>
+        <div class = "col-md-4"
+            <p>Booking Email: <%=venue[:email]%></p>
+        </div>
+        <div class = "col-md-4"
+            <p>Website: <a href="<%venue[:website]%>"><%=venue[:website]%></a></p>
+        </div>
+    </div>
+
+<% end %>
