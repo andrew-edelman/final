@@ -1,4 +1,4 @@
-<h1> New Review for <%= @venue[:venue_name]% ></h1>
+<h1> New Review for <%= @venue[:venue_name] %></h1>
 
 <div class = "row">
     <div class = "col">
@@ -18,15 +18,15 @@
             </div>
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-                <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
+                <label class="form-check-label" for="inlineRadio3">3</label>
             </div>
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
-                <label class="form-check-label" for="inlineRadio3">4 (disabled)</label>
+                <label class="form-check-label" for="inlineRadio3">4</label>
             </div>
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
-                <label class="form-check-label" for="inlineRadio3">5 (disabled)</label>
+                <label class="form-check-label" for="inlineRadio3">5</label>
             </div>
             <br>
             <p>Sound Rating</p>
@@ -40,15 +40,15 @@
             </div>
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-                <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
+                <label class="form-check-label" for="inlineRadio3">3</label>
             </div>
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
-                <label class="form-check-label" for="inlineRadio3">4 (disabled)</label>
+                <label class="form-check-label" for="inlineRadio3">4</label>
             </div>
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
-                <label class="form-check-label" for="inlineRadio3">5 (disabled)</label>
+                <label class="form-check-label" for="inlineRadio3">5</label>
             </div>
             <br>
             <p>Payout Rating</p>
@@ -62,15 +62,15 @@
             </div>
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-                <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
+                <label class="form-check-label" for="inlineRadio3">3</label>
             </div>
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
-                <label class="form-check-label" for="inlineRadio3">4 (disabled)</label>
+                <label class="form-check-label" for="inlineRadio3">4</label>
             </div>
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
-                <label class="form-check-label" for="inlineRadio3">5 (disabled)</label>
+                <label class="form-check-label" for="inlineRadio3">5</label>
             </div>
             <br><p>Vibe Rating</p>
             <div class="form-check form-check-inline">
@@ -83,22 +83,22 @@
             </div>
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-                <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
+                <label class="form-check-label" for="inlineRadio3">3</label>
             </div>
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
-                <label class="form-check-label" for="inlineRadio3">4 (disabled)</label>
+                <label class="form-check-label" for="inlineRadio3">4</label>
             </div>
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
-                <label class="form-check-label" for="inlineRadio3">5 (disabled)</label>
+                <label class="form-check-label" for="inlineRadio3">5</label>
             </div>
             <br>
             <div class="form-group">
                 <label for="exampleFormControlTextarea1">Comments</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
             </div>
-            <p><a href ="/venues/<% @venue[:id] %>/reviews/confirm" class="btn btn-outline-primary">Submit</a></p>
+            <p><a href ="/venues/<%= @venue[:id] %>/reviews/confirm" class="btn btn-outline-primary">Submit</a></p>
         </form>
     </div>
 </div>
