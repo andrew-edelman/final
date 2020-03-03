@@ -44,3 +44,29 @@ venues_table.insert(venue_name: "The Store",
                     website: "https://storefm.com/",
                     email: "contact@storefm.com",
                     phone: "(773) 327-7766")
+
+reviews_table = DB.from(:reviews)
+
+reviews_table.insert(venue_id: 1,
+                    reviewer_name: "Andy", 
+                    overall_rating: 4,
+                    sound_rating: 4,
+                    vibe_rating: 4,
+                    payout_rating: 4,
+                    comments: "great place!")
+
+reviews_table.insert(venue_id: 2,
+                    reviewer_name: "Andy", 
+                    overall_rating: 4,
+                    sound_rating: 4,
+                    vibe_rating: 4,
+                    payout_rating: 4,
+                    comments: "great place!")                   
+
+reviews_table.insert(venue_id: 3,
+                    reviewer_name: "Andy", 
+                    overall_rating: 4,
+                    sound_rating: 4,
+                    vibe_rating: 4,
+                    payout_rating: 4,
+                    comments: "great place!")
