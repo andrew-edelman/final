@@ -15,16 +15,19 @@
     </div>
     <div class = "row">
         <div class = "col-md-4">
-            
-            <p>Overall: <%=(@reviews_table.where(venue_id: venue[:id]).avg(:overall_rating)).round(2)%>/5
-            <% if @reviews_table.where(venue_id: venue[:id]).avg(:overall_rating) >= 3.5%>
-                <i class="fas fa-smile"></i>
-            <% elsif @reviews_table.where(venue_id: venue[:id]).avg(:overall_rating) >= 2.5 %>
-                <i class="fas fa-meh"></i>
+            <% if @reviews_table.where(venue_id: venue[:id]).avg(:overall_rating) == nil %>
+                <p>No Reviews Yet</p>
             <% else %>
-                <i class="fas fa-frown"></i>
+                <p>Overall: <%=(@reviews_table.where(venue_id: venue[:id]).avg(:overall_rating)).round(2)%>/5
+                <% if @reviews_table.where(venue_id: venue[:id]).avg(:overall_rating) >= 3.5%>
+                    <i class="fas fa-smile"></i>
+                <% elsif @reviews_table.where(venue_id: venue[:id]).avg(:overall_rating) >= 2.5 %>
+                    <i class="fas fa-meh"></i>
+                <% else %>
+                    <i class="fas fa-frown"></i>
+                <% end %>
+                </p>
             <% end %>
-            </p>
         </div>
         <div class = "col-md-4"
             <p>Booking Email: <%=venue[:email]%></p>

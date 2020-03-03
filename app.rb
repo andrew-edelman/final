@@ -55,7 +55,7 @@ get "/venue/new" do
     view "new_venue"
 end
 
-get "/venue/confirm" do
+get "/venue/new/confirm" do
     venues_table.insert(venue_name: params["venue_name"],
                         address: params["address"],
                         email: params["email"],
