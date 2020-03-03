@@ -51,11 +51,11 @@ get "/venues/:id/reviews/confirm" do
     view "reviews_confirm"
 end
 
-get "/venues/new" do
+get "/venue/new" do
     view "new_venue"
 end
 
-get "/venues/confirm" do
+get "/venue/confirm" do
     venues_table.insert(venue_name: params["venue_name"],
                         address: params["address"],
                         email: params["email"],
