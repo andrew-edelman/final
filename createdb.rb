@@ -16,12 +16,19 @@ end
 DB.create_table! :reviews do
   primary_key :id
   foreign_key :venue_id
-  String :reviewer_name
+  foreign_key :user_id
   Integer :overall_rating
   Integer :sound_rating
   Integer :vibe_rating
   Integer :payout_rating
   String :comments, text: true
+end
+
+DB.create_table! :users do
+  primary_key :id
+  String :name
+  String :email
+  String :password
 end
 
 # Insert initial (seed) data
@@ -45,28 +52,8 @@ venues_table.insert(venue_name: "The Store",
                     email: "contact@storefm.com",
                     phone: "(773) 327-7766")
 
-reviews_table = DB.from(:reviews)
+users_table = DB.from(:users)
 
-reviews_table.insert(venue_id: 1,
-                    reviewer_name: "Andy", 
-                    overall_rating: 4,
-                    sound_rating: 4,
-                    vibe_rating: 4,
-                    payout_rating: 4,
-                    comments: "great place!")
-
-reviews_table.insert(venue_id: 2,
-                    reviewer_name: "Andy", 
-                    overall_rating: 4,
-                    sound_rating: 4,
-                    vibe_rating: 4,
-                    payout_rating: 4,
-                    comments: "great place!")                   
-
-reviews_table.insert(venue_id: 3,
-                    reviewer_name: "Andy", 
-                    overall_rating: 4,
-                    sound_rating: 4,
-                    vibe_rating: 4,
-                    payout_rating: 4,
-                    comments: "great place!")
+users_table.insert(name: "Anonymous", 
+                    email: "anonymous@musiciansguide.com",
+                    password: "anonymous")
