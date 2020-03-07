@@ -30,6 +30,7 @@ get "/" do
     view "venues"
 end
 
+#for the google maps API on this view I just dropped in the address already in the DB directly in to the iframe instead of using geocoder to convert the address to lat-long since that seemed unnecessary?
 get "/venues/:id" do
     @venue = venues_table.where(id: params[:id]).first
     @reviews = reviews_table.where(venue_id: @venue[:id])
